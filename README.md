@@ -40,56 +40,7 @@
 - 上传统计
 - 账户设置
 
-## 4. 数据库设计
-
-### users 表
-| 字段 | 类型 | 说明 |
-|------|------|------|
-| id | INTEGER | 主键自增 |
-| username | TEXT | 唯一用户名 |
-| email | TEXT | 邮箱 |
-| password_hash | TEXT | 密码哈希 |
-| avatar | TEXT | 头像路径 |
-| created_at | DATETIME | 注册时间 |
-
-### images 表
-| 字段 | 类型 | 说明 |
-|------|------|------|
-| id | INTEGER | 主键自增 |
-| user_id | INTEGER | 上传者ID |
-| filename | TEXT | 存储文件名 |
-| original_name | TEXT | 原始文件名 |
-| file_path | TEXT | 文件路径 |
-| file_size | INTEGER | 文件大小 |
-| width | INTEGER | 宽度 |
-| height | INTEGER | 高度 |
-| tags | TEXT | 标签（逗号分隔） |
-| views | INTEGER | 查看次数 |
-| created_at | DATETIME | 上传时间 |
-
-## 5. 页面设计
-
-### 5.1 登录/注册页
-- 现代化卡片设计
-- 输入验证
-- 错误提示
-
-### 5.2 首页（广场）
-- 瀑布流/网格布局
-- 顶部导航栏
-- 登录/未登录状态切换
-
-### 5.3 上传页
-- 拖拽上传区域
-- 进度条
-- 标签输入
-
-### 5.4 个人中心
-- 图片网格
-- 统计卡片
-- 操作按钮
-
-## 6. 存储结构
+## 4. 存储结构
 
 ```
 /home/ubuntu/.openclaw/workspace/pichome/
@@ -111,12 +62,3 @@
     ├── profile.html
     └── image.html
 ```
-
-## 7. 验收标准
-
-- [ ] 用户可以注册和登录
-- [ ] 上传图片成功并显示
-- [ ] 广场展示所有用户图片
-- [ ] 可以删除自己的图片
-- [ ] 页面美观，响应式设计
-- [ ] 无需额外数据库配置
