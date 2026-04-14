@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}登录 - PicHome{% endblock %}
+
+{% block content %}
+<div class="auth-container">
+    <div class="auth-card">
+        <div class="auth-header">
+            <span class="auth-icon">
+                <svg width="80" height="80" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="3" y="11" width="18" height="11" rx="2" fill="#6366f1"/>
+                    <path d="M7 11V7a5 5 0 0110 0v4" stroke="#8b5cf6" stroke-width="2" stroke-linecap="round"/>
+                    <circle cx="12" cy="16" r="2" fill="white"/>
+                </svg>
+            </span>
+            <h1>欢迎回来</h1>
+            <p>登录您的 PicHome 账户</p>
+        </div>
+
+        <form method="POST" class="auth-form">
+            <div class="form-group">
+                <label for="username">用户名</label>
+                <input type="text" id="username" name="username" required 
+                       placeholder="请输入用户名" autocomplete="username">
+            </div>
+
+            <div class="form-group">
+                <label for="password">密码</label>
+                <input type="password" id="password" name="password" required 
+                       placeholder="请输入密码" autocomplete="current-password">
+            </div>
+
+            <button type="submit" class="btn-submit">登录</button>
+        </form>
+
+        <div class="auth-footer">
+            <p>还没有账户？<a href="{{ url_for('register') }}">立即注册</a></p>
+        </div>
+    </div>
+</div>
+{% endblock %}
